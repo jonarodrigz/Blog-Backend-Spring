@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
+@Table(name="post" ,catalog="blog1")
 public class Post {
 
     @Id

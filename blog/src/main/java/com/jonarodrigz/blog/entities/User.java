@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name="user1" ,catalog="blog1")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_user;
+    private Integer iduser;
 
     @JsonBackReference
     @ManyToOne(fetch=FetchType.LAZY)
@@ -52,11 +53,11 @@ public class User {
     }
 
     public Integer getId_user() {
-        return id_user;
+        return iduser;
     }
 
     public void setId_user(Integer id_user) {
-        this.id_user = id_user;
+        this.iduser = id_user;
     }
 
        public TypeUser getTypeuser() {
@@ -142,7 +143,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id_user=" + id_user +
+                "id_user=" + iduser +
                 "typeuser=" + typeuser +
                 ", name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
